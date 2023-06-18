@@ -76,7 +76,7 @@ But if the Http request `(/request/value)` is called, the old data is returned.
 ### 4. Session
 If the scope of the class is said to be **session**, then new instance of bean is created on spring container on every HTTP session. It is usually used in web application.
 ```
-@Scope(value = "session")
+@Scope(value = "session") 
 ```
 If the data in this scope is updated and if the update API `(/session/update-value)` is called, the updated value is returned.
 
