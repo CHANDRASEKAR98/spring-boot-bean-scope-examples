@@ -17,9 +17,11 @@ This project contains the bean scope with practical examples. singleton, prototy
 1. calling `/request/value` API and below response is received.
    
 ![App Screenshot](https://github.com/CHANDRASEKAR98/spring-boot-bean-scope-examples/blob/main/images/request-example-ss-1.JPG)
+
 2. calling `/request/updated-value` API and below response is received.
 
 ![App screenshot](https://github.com/CHANDRASEKAR98/spring-boot-bean-scope-examples/blob/main/images/request-example-ss-2.JPG)
+
 3. If again `/request/value` API and below response is received (old data is received).
 
 ![App Screenshot](https://github.com/CHANDRASEKAR98/spring-boot-bean-scope-examples/blob/main/images/request-example-ss-1.JPG)
@@ -28,9 +30,11 @@ This project contains the bean scope with practical examples. singleton, prototy
 1. calling `/session/value` API and below response is received.
 
 ![App Screenshot](https://github.com/CHANDRASEKAR98/spring-boot-bean-scope-examples/blob/main/images/session-example-ss-1.JPG)
+
 2. calling `/session/updated-value` API and below response is received.
 
 ![App screenshot](https://github.com/CHANDRASEKAR98/spring-boot-bean-scope-examples/blob/main/images/session-example-ss-updated-1.JPG)
+
 3. If again `/session/value` API and below response is received (updated data is received).
 
 ![App Screenshot](https://github.com/CHANDRASEKAR98/spring-boot-bean-scope-examples/blob/main/images/session-example-ss-3-after-updated.JPG)
