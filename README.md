@@ -38,3 +38,33 @@ The output will be displayed like the following.
 Go on to the [Spring Initializr](https://start.spring.io/)  website. Choose Maven project type, language as Java and give in the project meta data and generate the project. The project is hence downloaded in zip format.
 
 Now, import the project on to the IDE.
+
+## Bean Scope explanation
+### 1. Singleton
+By default, the scope is **singleton** even if not specified. If the scope of the class is said to be **singleton**, then only one instance of bean is created on spring container.
+```
+@Scope(value = "singleton")
+```
+### 2. Prototype
+If the scope of the class is said to be **prototype**, then new instance of bean is created on spring container every time the bean is requested.
+```
+@Scope(value = "prototype")
+```
+### 3. Request
+If the scope of the class is said to be **request**, then new instance of bean is created on spring container on every HTTP request. It is usually used in web application.
+```
+@Scope(value = "request")
+```
+If the data in this scope is updated and if the update API `(/request/update-value)` is called, the updated value is returned.
+
+But if the Http request `(/request/value)` is called, the old data is returned.
+### 4. Session
+If the scope of the class is said to be **session**, then new instance of bean is created on spring container on every HTTP session. It is usually used in web application.
+```
+@Scope(value = "session")
+```
+If the data in this scope is updated and if the update API `(/session/update-value)` is called, the updated value is returned.
+
+But if the Http request `(/session/value)` is called, the updated data is returned.
+### 5. Global Session
+The global session scope is similar to the Session scope and really only makes sense in the context of portlet-based web applications. The portlet specification defines the notion of a global Session that is shared among all of the various portlets that make up a single portlet web application. Beans defined at the global session scope are bound to the lifetime of the global portlet Session.
